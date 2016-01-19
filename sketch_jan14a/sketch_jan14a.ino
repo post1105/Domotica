@@ -41,6 +41,8 @@ EthernetServer server(ethPort);              // EthernetServer instance (listeni
 
 bool pinState = false;                   // Variable to store actual pin state
 bool pinState2 = false;
+bool pinState3 = false;
+bool pinChange3 = false;
 bool pinChange2 = false;
 bool pinChange = false;                  // Variable to store actual pin change
 int  sensorValue = 0;                    // Variable to store actual sensor value
@@ -122,6 +124,7 @@ void loop()
    {
       checkEvent(switchPin, pinState);
       checkEvent2(switchPin, pinState2);
+      checkEvent3(switchPin, pinState3);
       //sensorValue = readSensor(0, 100); 
       //sensorValue = analogRead(analogPin);
       //Serial.print("Sensor reading: "); Serial.println(sensorValue);
@@ -144,6 +147,13 @@ void loop()
         if(pinState2) {digitalWrite(ledPin, HIGH); mySwitch.send(3874347,24);}
         else{ digitalWrite(ledPin, LOW); mySwitch.send(3874346,24);}
         pinChange2 = false;
+        delay(100);
+      }
+      if (pinChange3)
+      {
+        if(pinState3) {digitalWrite(ledPin, HIGH); mySwitch.send(3874351,24);}
+        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874350,24);}
+        pinChange3 = false;
         delay(100);
       }
        
@@ -201,6 +211,15 @@ void executeCommand(char cmd)
             else { pinState2 = true; Serial.println("Set pin state2 to \"ON\""); }  
             pinChange2 = true; 
             break;
+         case 'w': // Report switch state to the app
+            if (pinState3) { server.write(" ON\n"); Serial.println("Pin state3 is ON"); }  // always send 4 chars
+            else { server.write("OFF\n"); Serial.println("Pin state3 is OFF"); }
+            break;
+         case 'v': // Toggle state; If state is already ON then turn it OFF
+            if (pinState3) { pinState3 = false; Serial.println("Set pin state3 to \"OFF\""); }
+            else { pinState3 = true; Serial.println("Set pin state3 to \"ON\""); }  
+            pinChange3 = true; 
+            break;  
          case 'i':    
             digitalWrite(infoPin, HIGH);
             break;
@@ -276,6 +295,27 @@ void checkEvent2(int p, bool &state)
          prevswLevel = false;  // High -> Low transition
          state = false;
          pinChange2 = true;
+      }
+}
+void checkEvent3(int p, bool &state)
+{
+   static bool swLevel = false;       // Variable to store the switch level (Low or High)
+   static bool prevswLevel = false;   // Variable to store the previous switch level
+
+   swLevel = digitalRead(p);
+   if (swLevel)
+      if (prevswLevel) delay(1);
+      else {               
+         prevswLevel = true;   // Low -> High transition
+         state = true;
+         pinChange3 = true;
+      } 
+   else // swLevel == Low
+      if (!prevswLevel) delay(1);
+      else {
+         prevswLevel = false;  // High -> Low transition
+         state = false;
+         pinChange3 = true;
       }
 }
 
