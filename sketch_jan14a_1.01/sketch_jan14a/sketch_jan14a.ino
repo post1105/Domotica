@@ -125,67 +125,23 @@ void loop()
       checkEvent(switchPin, pinState);
       checkEvent2(switchPin, pinState2);
       checkEvent3(switchPin, pinState3);
-      sensorValue = readSensor(0, 100); 
-      sensorValue = analogRead(analogPin);
-      Serial.print("Sensor reading: "); Serial.println(sensorValue);
-      delay(1000);
+      //sensorValue = readSensor(0, 100); 
+      //sensorValue = analogRead(analogPin);
+      //Serial.print("Sensor reading: "); Serial.println(sensorValue);
+      //delay(1000);
       
   
         
        //Activate pin based op pinState
-      //if (pinChange) 
-      //{
-         //if (pinState) { digitalWrite(ledPin, HIGH); mySwitch.send(3874349,24); }
-         
-         //else { digitalWrite(ledPin, LOW);   mySwitch.send(3874348,24); }
-         
-         if(pinState) {digitalWrite(ledPin,HIGH);
-         
-         {
-          if(sensorValue >= thresholdValue)
-          {
-            
-          
-            if(!isSwitchOn)
-            
-              {
-                Serial.println("transmitting on signal to switch");
-                mySwitch.send(3874351,24);//1
-                delay(1000);
-                 //vervang dit met de code die bij jouw schakelaar hoort
-                isSwitchOn = true;
-              }
-              else
-              {
-                Serial.println("switch is already ON. idling...");
-              }
-            
-          }
-         
-          else
-          {
-            
-              if(isSwitchOn)
-            
-              {
-                Serial.println("transmitting off signal to switch");
-                mySwitch.send(3874350,24);//1
-                delay(1000);
-                //vervang dit met de code die bij jouw schakelaar hoort
-                isSwitchOn = false;
-                Serial.println("transmitting off signal to switch");
-              }
-              else
-              {
-                Serial.println("switch is already OFF. iddling");
-              }
-          }
-         }
-            }
-            else{digitalWrite(ledPin,LOW); Serial.println("sensor is OFF");}
-             pinChange = false;
-             delay(100); // delay depends on device
-      //}
+      if (pinChange) 
+      {
+
+         if (pinState) { digitalWrite(ledPin, HIGH); mySwitch.send(3874349,24); }
+         else { digitalWrite(ledPin, LOW);   mySwitch.send(3874348,24); }
+        
+          pinChange = false;
+             delay(100);
+      }
       if (pinChange2)
       {
         if(pinState2) {digitalWrite(ledPin, HIGH); mySwitch.send(3874347,24);}
@@ -247,8 +203,8 @@ void executeCommand(char cmd)
             pinChange = true; 
             break;
          case 'r': // Report switch state to the app
-            if (pinState2) { server.write(" ON\n"); Serial.println("Pin state2 is ON"); }  // always send 4 chars
-            else { server.write("OFF\n"); Serial.println("Pin state2 is OFF"); }
+            if (pinState2) { server.write(" AAN\n"); Serial.println("Pin state2 is ON"); }  // always send 4 chars
+            else { server.write("UIT\n"); Serial.println("Pin state2 is OFF"); }
             break;
          case 'u': // Toggle state; If state is already ON then turn it OFF
             if (pinState2) { pinState2 = false; Serial.println("Set pin state2 to \"OFF\""); }
@@ -256,8 +212,8 @@ void executeCommand(char cmd)
             pinChange2 = true; 
             break;
          case 'w': // Report switch state to the app
-            if (pinState3) { server.write(" ON\n"); Serial.println("Pin state3 is ON"); }  // always send 4 chars
-            else { server.write("OFF\n"); Serial.println("Pin state3 is OFF"); }
+            if (pinState3) { server.write(" JA\n"); Serial.println("Pin state3 is ON"); }  // always send 4 chars
+            else { server.write("NEE\n"); Serial.println("Pin state3 is OFF"); }
             break;
          case 'v': // Toggle state; If state is already ON then turn it OFF
             if (pinState3) { pinState3 = false; Serial.println("Set pin state3 to \"OFF\""); }
