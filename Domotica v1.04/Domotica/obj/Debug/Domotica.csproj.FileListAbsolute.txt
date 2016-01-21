@@ -42,3 +42,19 @@ C:\Users\Tsjerk\Downloads\Domotica\Domotica\obj\Debug\R.cs.flag
 C:\Users\Tsjerk\Downloads\Domotica\Domotica\obj\Debug\uploadflags.txt
 C:\Users\Tsjerk\Downloads\Domotica\Domotica\obj\Debug\Domotica.dll.mdb
 C:\Users\Tsjerk\Downloads\Domotica\Domotica\bin\Debug\Domotica.dll.mdb
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\Domotica.csprojResolveAssemblyReference.cache
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\bin\Debug\Domotica.dll
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\bin\Debug\Domotica.pdb
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\bin\Debug\Domotica.Domotica.apk
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\bin\Debug\Domotica.Domotica-Signed.apk
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\Domotica.dll
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\Domotica.pdb
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\android\bin\Domotica.Domotica.apk
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\res\layout\main.xml
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\res\values\strings.xml
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\res\drawable\icon.png
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\res\menu\menu.xml
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\R.cs.flag
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\uploadflags.txt
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\obj\Debug\Domotica.dll.mdb
+C:\Users\Tsjerk\Documents\Domotica\Domotica v1.04\Domotica\bin\Debug\Domotica.dll.mdb

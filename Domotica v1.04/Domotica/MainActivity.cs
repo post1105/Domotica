@@ -59,10 +59,10 @@ namespace Domotica
         // Variables (components/controls)
         // Controls on GUI
         Button buttonConnect;
-        Button buttonChangePinState, buttonChangePin2State, buttonChangePin3State;
+        Button buttonChangePinState, buttonChangePin2State, buttonChangePin3State, buttonChangePin4State;
         TextView textViewServerConnect, textViewTimerStateValue, textViewSchakelaarEen, textViewSchakelaarTwee, textViewSchakelaarDrie;
-        public TextView textViewChangePinStateValue, textViewChangePin2StateValue, textViewChangePin3StateValue, textViewSensorValue, textViewDebugValue;
-        EditText editTextIPAddress, editTextIPPort;
+        public TextView textViewChangePinStateValue, textViewChangePin2StateValue, textViewChangePin3StateValue, textViewChangePin4StateValue, textViewSensorValue, textViewDebugValue;
+        EditText editTextIPAddress, editTextIPPort, editTextLichtTres, editTextDrukTres;
 
         Timer timerClock, timerSockets;             // Timers   
         Socket socket = null;                       // Socket   
@@ -82,6 +82,7 @@ namespace Domotica
             buttonChangePinState = FindViewById<Button>(Resource.Id.buttonChangePinState);
             buttonChangePin2State = FindViewById<Button>(Resource.Id.buttonChangePin2State);
             buttonChangePin3State = FindViewById<Button>(Resource.Id.buttonChangePin3State);
+            buttonChangePin4State = FindViewById<Button>(Resource.Id.buttonChangePin4State);
             textViewTimerStateValue = FindViewById<TextView>(Resource.Id.textViewTimerStateValue);
             textViewServerConnect = FindViewById<TextView>(Resource.Id.textViewServerConnect);
             textViewChangePinStateValue = FindViewById<TextView>(Resource.Id.textViewChangePinStateValue);
@@ -90,8 +91,8 @@ namespace Domotica
             textViewSensorValue = FindViewById<TextView>(Resource.Id.textViewSensorValue);
             editTextIPAddress = FindViewById<EditText>(Resource.Id.editTextIPAddress);
             editTextIPPort = FindViewById<EditText>(Resource.Id.editTextIPPort);
-            editTextDrukTres = FindViewById<editText>(Resource.Id.editDrukTres);
-            editTextLichtTres = FindViewById<editText>(Resource.Id.editLichtTres);
+            editTextDrukTres = FindViewById<EditText>(Resource.Id.editDrukTres);
+            editTextLichtTres = FindViewById<EditText>(Resource.Id.editLichtTres);
             
 
             UpdateConnectionState(4, "Disconnected");

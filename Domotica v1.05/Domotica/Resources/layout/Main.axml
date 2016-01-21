@@ -177,6 +177,22 @@
             android:layout_alignParentRight="true"
             android:gravity="center_vertical|center"
             android:textAppearance="?android:attr/textAppearanceMedium" />
+        <Button
+            android:text="@string/button_pin4_state_text"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/buttonChangePin4State"
+            android:layout_below="@+id/buttonChangePin3State"
+            android:layout_alignParentLeft="true" />
+        <TextView
+            android:text="@string/change_pin4_state_value"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/textViewChangePin4StateValue"
+            android:layout_below="@+id/textViewChangePin3StateValue"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical|center"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="fill_parent"
