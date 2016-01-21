@@ -63,7 +63,9 @@
   <ItemGroup>
     <Compile Include="Connector.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="Receiver.cs" />
+    <Compile Include="..\..\..\..\Downloads\Domotica v1.04.4\Domotica\Receiver.cs">
+      <Link>Receiver.cs</Link>
+    </Compile>
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sender.cs" />

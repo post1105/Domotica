@@ -60,7 +60,7 @@ namespace Domotica
         // Controls on GUI
         Button buttonConnect;
         Button buttonChangePinState, buttonChangePin2State, buttonChangePin3State, buttonChangePin4State;
-        TextView textViewServerConnect, textViewTimerStateValue, textViewSchakelaarEen, textViewSchakelaarTwee, textViewSchakelaarDrie;
+        TextView textViewServerConnect, textViewTimerStateValue;
         public TextView textViewChangePinStateValue, textViewChangePin2StateValue, textViewChangePin3StateValue, textViewChangePin4StateValue, textViewSensorValue, textViewDebugValue;
         EditText editTextIPAddress, editTextIPPort, editTextLichtTres, editTextDrukTres;
 

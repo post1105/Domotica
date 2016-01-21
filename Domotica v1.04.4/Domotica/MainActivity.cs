@@ -61,7 +61,7 @@ namespace Domotica
         Button buttonConnect;
         Button buttonChangePinState, buttonChangePin2State, buttonChangePin3State, buttonChangePin4State;
         TextView textViewServerConnect, textViewTimerStateValue, textViewSchakelaarEen, textViewSchakelaarTwee, textViewSchakelaarDrie;
-        public TextView textViewChangePinStateValue, textViewChangePin2StateValue, textViewChangePin3StateValue, textViewChangePin4StateValue textViewSensorValue, textViewDebugValue;
+        public TextView textViewChangePinStateValue, textViewChangePin2StateValue, textViewChangePin3StateValue, textViewChangePin4StateValue, textViewSensorValue, textViewDebugValue;
         EditText editTextIPAddress, editTextIPPort;
 
         Timer timerClock, timerSockets;             // Timers   
@@ -90,8 +90,8 @@ namespace Domotica
             textViewSensorValue = FindViewById<TextView>(Resource.Id.textViewSensorValue);
             editTextIPAddress = FindViewById<EditText>(Resource.Id.editTextIPAddress);
             editTextIPPort = FindViewById<EditText>(Resource.Id.editTextIPPort);
-            editTextDrukTres = FindViewById<EditText>(Resource.Id.editDrukTres);
-            editTextLichtTres = FindViewById<EditText>(Resource.Id.editLichtTres);
+            //editTextDrukTres = FindViewById<EditText>(Resource.Id.editDrukTres);
+            //editTextLichtTres = FindViewById<EditText>(Resource.Id.editLichtTres);
             
 
             UpdateConnectionState(4, "Disconnected");
@@ -108,7 +108,7 @@ namespace Domotica
             this.Title = (connector == null) ? this.Title + " (simple sockets)" : this.Title + " (thread sockets)";
 
             // timer object, running clock
-            timerClock = new System.Timers.Timer() { Interval = 2000, Enabled = true }; // Interval >= 1000
+            timerClock = new System.Timers.Timer() { Interval = 1000, Enabled = true }; // Interval >= 1000
             timerClock.Elapsed += (obj, args) =>
             {
                 RunOnUiThread(() => { textViewTimerStateValue.Text = DateTime.Now.ToString("h:mm:ss"); }); 

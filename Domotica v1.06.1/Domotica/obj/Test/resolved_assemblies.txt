@@ -1,0 +1,9 @@
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\Domotica.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\Mono.Android.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\mscorlib.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.Core.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.Xml.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.Xml.Linq.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.Runtime.Serialization.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\assets\System.ServiceModel.Internals.dll
