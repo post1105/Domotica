@@ -46,7 +46,7 @@ bool pinChange3 = false;
 bool pinChange2 = false;
 bool pinChange = false;                  // Variable to store actual pin change
 int  sensorValue = 0;                    // Variable to store actual sensor value
-int thresholdValue = 20;
+int thresholdValue;
 bool isSwitchOn = false;
 RCSwitch mySwitch = RCSwitch();
 
@@ -188,15 +188,15 @@ void loop()
       //}
       if (pinChange2)
       {
-        if(pinState2) {digitalWrite(ledPin, HIGH); mySwitch.send(3874347,24);}
-        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874346,24);}
+        if(pinState2) {digitalWrite(ledPin, HIGH); mySwitch.send(3874349,24);}
+        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874348,24);}
         pinChange2 = false;
         delay(100);
       }
       if (pinChange3)
       {
-        if(pinState3) {digitalWrite(ledPin, HIGH); mySwitch.send(3874351,24);}
-        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874350,24);}
+        if(pinState3) {digitalWrite(ledPin, HIGH); mySwitch.send(3874347,24);}
+        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874346,24);}
         pinChange3 = false;
         delay(100);
       }
