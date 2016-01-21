@@ -45,6 +45,8 @@ int  sensorValue = 0;                    // Variable to store actual sensor valu
 int thresholdValue = 20;
 bool isSwitchOn = false;
 RCSwitch mySwitch = RCSwitch();
+RCSwitch mySwitch2 = RCSwitch();
+RCSwitch mySwitch3 = RCSwitch();
 
 void setup()
 {
@@ -66,6 +68,9 @@ void setup()
 
    Serial.begin(9600);
    mySwitch.enableTransmit(RFPin);
+   mySwitch2.enableTransmit(RFPin);
+   mySwitch3.enableTransmit(RFPin);
+   
 
    //Try to get an IP address from the DHCP server.
    if (Ethernet.begin(mac) == 0)
@@ -127,8 +132,8 @@ void loop()
   
         
       // Activate pin based op pinState
-      if (pinChange) 
-      {
+      //if (pinChange) 
+      //{
 
          //if (pinState) { digitalWrite(ledPin, HIGH); mySwitch.send(3874349,24); }
          if(pinState) {digitalWrite(ledPin,HIGH);
@@ -142,6 +147,10 @@ void loop()
             
               {
                 Serial.println("transmitting on signal to switch");
+                mySwitch.send(3874351,24);//1
+                delay(1000);
+                 //vervang dit met de code die bij jouw schakelaar hoort
+                isSwitchOn = true;
               }
               else
               {
@@ -157,6 +166,11 @@ void loop()
             
               {
                 Serial.println("transmitting off signal to switch");
+                mySwitch.send(3874350,24);//1
+                delay(1000);
+                //vervang dit met de code die bij jouw schakelaar hoort
+                isSwitchOn = false;
+                Serial.println("transmitting off signal to switch");
               }
               else
               {
@@ -168,7 +182,7 @@ void loop()
             else{digitalWrite(ledPin,LOW); Serial.println("sensor is OFF");}
              pinChange = false;
              delay(100); // delay depends on device
-          }
+        //  }
       
          
             
