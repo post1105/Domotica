@@ -198,6 +198,20 @@ namespace Domotica
                     }
                 };
             }
+            if (buttonChangePin4State != null)
+            {
+                buttonChangePin4State.Click += (sender, e) =>
+                {
+                    if (connector == null) // -> simple sockets
+                    {
+                        socket.Send(Encoding.ASCII.GetBytes("z"));                 // Send toggle-command to the Arduino
+                    }
+                    else // -> threaded sockets
+                    {
+                        if (connector.CheckStarted()) connector.SendMessage("z");  // Send toggle-command to the Arduino
+                    }
+                };
+            }
         }
 
 

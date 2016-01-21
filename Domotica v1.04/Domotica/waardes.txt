@@ -23,4 +23,4 @@ v = knop schakelaar 3
 w = 
 x =
 y = 
-z =
+z = knop schakelaar 4
