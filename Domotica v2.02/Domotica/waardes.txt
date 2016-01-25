@@ -1,0 +1,34 @@
+Xamarin
+a = textview druk waarde
+b = textview licht waarde
+c =
+d =
+e =
+f =
+g =
+h =
+i =
+j =
+k =
+l =
+m =
+n =
+o =
+p =
+q = textview schakelaar 3
+r = textview schakelaar 2
+s = textview schakelaar 1
+t = knop schakelaar 1
+u = knop schakelaar 2
+v = knop schakelaar 3
+w = 
+x =
+y = 
+z =
+Arduino
+OFF = textview.Text Schakelaar 1 Uit
+ ON = textview.Text Schakelaar 1 Aan
+UIT = textview.Text Schakelaar 2 Uit
+AAN = textview.Text Schakelaar 2 Aan
+NEE = textview.Text Schakelaar 3 Uit
+ JA = textview.Text Schakelaar 3 Aan
