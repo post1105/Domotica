@@ -1,0 +1,31 @@
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\bin\Test\Domotica.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\bin\Test\Domotica.pdb
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\bin\Test\Domotica.Domotica.apk
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\bin\Test\Domotica.Domotica-Signed.apk
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\Domotica.dll
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\Domotica.pdb
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\android\bin\Domotica.Domotica.apk
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\res\layout\main.xml
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\res\values\strings.xml
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\res\drawable\icon.png
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\res\menu\menu.xml
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\R.cs.flag
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\uploadflags.txt
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\obj\Test\Domotica.dll.mdb
+C:\Users\Ruben\Documents\Domotica v1.05\Domotica\bin\Test\Domotica.dll.mdb
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\bin\Test\Domotica.dll
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\bin\Test\Domotica.pdb
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\bin\Test\Domotica.Domotica.apk
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\bin\Test\Domotica.Domotica-Signed.apk
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\Domotica.csprojResolveAssemblyReference.cache
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\Domotica.dll
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\Domotica.pdb
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\android\bin\Domotica.Domotica.apk
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\res\layout\main.xml
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\res\values\strings.xml
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\res\drawable\icon.png
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\res\menu\menu.xml
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\R.cs.flag
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\uploadflags.txt
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\obj\Test\Domotica.dll.mdb
+C:\Users\Ruben\Documents\P2P Domotica\Repository\Domotica\Domotica v1.06\Domotica\bin\Test\Domotica.dll.mdb
