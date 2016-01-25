@@ -135,65 +135,36 @@ void loop()
       delay(1000);
       
 
-      if(pinState) {digitalWrite(ledPin,HIGH);
+
+if(sensorValue >= thresholdValue) //ik ga hiervan uit van een ldr, als ik licht op de sensor schijnt wordt de waarde lager; is dat bij jullie niet het geval verander "<=" naar ">="
+  {    
+    if(!isSwitchOn)
+    {
+      Serial.println("transmitting on signal to switch");
+     
+         mySwitch.send(3874347,24);//1
          
-        {
-          
-          
-         if(sensorValue >= thresholdValue)
-          {
-            
-          
-            if(!isSwitchOn)
-            
-              {
-                Serial.println("transmitting on signal to switch");
-                
-            
-                mySwitch.send(3874351,24);//1
-                
-                delay(1500);
-            
-                 //vervang dit met de code die bij jouw schakelaar hoort
-                isSwitchOn = true;
-              }
-              else
-              {
-                Serial.println("switch is already ON. idling...");
-                
-              }
-            
-        }
-         
-          else
-         {
-            
-              if(isSwitchOn)
-            
-              {
-                Serial.println("transmitting off signal to switch");
-                
-            
-                mySwitch.send(3874350,24);//1
-                delay(1500);
-            
-                //vervang dit met de code die bij jouw schakelaar hoort
-                isSwitchOn = false;
-                Serial.println("transmitting off signal to switch");
-              }
-              else
-              {
-                Serial.println("switch is already OFF. iddling");
-                
-                
-              }
-         }
-        }
-           }
-           else{digitalWrite(ledPin, LOW); Serial.println("sensor is OFF");}
-      
-            pinChange = false;
-            delay(1000); // delay depends on 
+        
+     
+      //vervang dit met de code die bij jouw schakelaar hoort
+      isSwitchOn = true;
+    }
+    else
+      Serial.println("switch is already ON. idling...");
+  }
+  else
+  {
+    if(isSwitchOn)
+    {
+      Serial.println("transmitting off signal to switch");
+      mySwitch.send(3874346,24);//1
+      //3 //vervang dit met de code die bij jouw schakelaar hoort
+      isSwitchOn = false;
+    }
+    else
+      Serial.println("switch is already OFF. idling...");
+  }  
+  delay(1500);
 
       
        //Activate pin based op pinState
@@ -201,8 +172,13 @@ void loop()
 
             
             
-          
-            
+      if (pinChange)
+      {
+       if(pinState) {digitalWrite(ledPin, HIGH); mySwitch.send(3874351,24);}
+        else{ digitalWrite(ledPin, LOW); mySwitch.send(3874350,24);}
+        pinChange = false;
+        delay(100);
+      }     
       if (pinChange2)
       {
         if(pinState2) {digitalWrite(ledPin, HIGH); mySwitch.send(3874349,24);}
@@ -217,13 +193,7 @@ void loop()
         pinChange3 = false;
         delay(100);
       }
-     // if (pinChange)
-     // {
-    //    if(pinState) {digitalWrite(ledPin, HIGH); mySwitch.send(3874351,24);}
-     //   else{ digitalWrite(ledPin, LOW); mySwitch.send(3874350,24);}
-     //   pinChange = false;
-     //   delay(100);
-     // }
+      
    
    
       
@@ -287,15 +257,15 @@ void executeCommand(char cmd)
             else { pinState3 = true; Serial.println("Set pin state3 to \"ON\""); }  
             pinChange3 = true; 
             break;
-         case 'y': // Report switch state to the app
-            if (pinState4) { server.write("YES\n"); Serial.println("Pin state4 is ON"); }  // always send 4 chars
-            else { server.write(" NO\n"); Serial.println("Pin state3 is OFF"); }
-            break;
-         case 'x': // Toggle state; If state is already ON then turn it OFF
-            if (pinState4) { pinState4 = false; Serial.println("Set pin state4 to \"OFF\""); }
-            else { pinState4 = true; Serial.println("Set pin state4 to \"ON\""); }  
-            pinChange4 = true; 
-            break;  
+         //case 'y': // Report switch state to the app
+            //if (pinState4) { server.write("YES\n"); Serial.println("Pin state4 is ON"); }  // always send 4 chars
+            //else { server.write(" NO\n"); Serial.println("Pin state3 is OFF"); }
+            //break;
+         //case 'x': // Toggle state; If state is already ON then turn it OFF
+            //if (pinState4) { pinState4 = false; Serial.println("Set pin state4 to \"OFF\""); }
+            //else { pinState4 = true; Serial.println("Set pin state4 to \"ON\""); }  
+            //pinChange4 = true; 
+            //break;  
          case 'i':    
             digitalWrite(infoPin, HIGH);
             break;
